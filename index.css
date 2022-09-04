@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+    min-height: 100vh;
+}
+
+.card {
+    background-color: hsl(244, 38%, 16%);
+    margin: 2rem auto;
+    width: 20rem;
+    height: 40rem;
+    border-radius: 0.9rem;
+
+}
+
+.card-image {
+    background-image: url('./images/image-header-mobile.jpg');
+    height: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    isolation: isolate;
+    max-width: 100%;
+    background-position: center;
+    border-radius: 0.9rem 0.9rem 0 0;
+}
+
+.card-image::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background-color: rgba(157, 0, 255, 0.46);
+    z-index: -1;
+    border-radius: 0.9rem 0.9rem 0 0;
+
+}
