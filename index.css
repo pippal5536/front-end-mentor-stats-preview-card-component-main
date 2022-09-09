@@ -30,6 +30,8 @@ body {
   width: 20rem;
   height: 50rem;
   border-radius: 0.9rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-image {
@@ -78,6 +80,12 @@ body {
   line-height: 1.6em;
   margin-bottom: 1rem;
 }
+.stats {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
 .stat {
   text-align: center;
 }
@@ -91,4 +99,53 @@ body {
   font-size: 0.8rem;
   color: hsla(0, 0%, 100%, 0.6);
   margin-top: 0.4rem;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 65rem;
+    height: 27rem;
+  }
+  .card-image {
+    background-image: url("./images/image-header-desktop.jpg");
+    height: 100%;
+    width: 50%;
+    border-radius: 0 0.9rem 0.9rem 0;
+    background-size: cover;
+  }
+  .card-image::after {
+    border-radius: 0 0.9rem 0.9rem 0;
+  }
+  .card-detail {
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+  }
+  .card-heading {
+    text-align: left;
+    font-size: 1.8rem;
+    width: 85%;
+    margin-top: 3rem;
+  }
+  .main-paragraph {
+    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    width: 85%;
+  }
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    height: 40%;
+    align-items: center;
+  }
+  .stat {
+    text-align: left;
+  }
+  .stat-number {
+    font-size: 1.2rem;
+  }
 }
