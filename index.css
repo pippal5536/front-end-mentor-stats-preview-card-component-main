@@ -1,46 +1,94 @@
+/* 
+font-family: 'Inter',
+sans-serif;
+font-family: 'Lexend Deca',
+sans-serif;
+*/
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(233, 47%, 7%);
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(233, 47%, 7%);
+  min-height: 100vh;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
 .card {
-    background-color: hsl(244, 38%, 16%);
-    margin: 2rem auto;
-    width: 20rem;
-    height: 40rem;
-    border-radius: 0.9rem;
-
+  background-color: hsl(244, 38%, 16%);
+  margin: 2rem auto;
+  width: 20rem;
+  height: 50rem;
+  border-radius: 0.9rem;
 }
 
 .card-image {
-    background-image: url('./images/image-header-mobile.jpg');
-    height: 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    isolation: isolate;
-    max-width: 100%;
-    background-position: center;
-    border-radius: 0.9rem 0.9rem 0 0;
+  background-image: url("./images/image-header-mobile.jpg");
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* New Property I learnt and is a good friend of z-index */
+  isolation: isolate;
+  max-width: 100%;
+  background-position: center;
+  border-radius: 0.9rem 0.9rem 0 0;
 }
-
+/* Blur Background image */
 .card-image::after {
-    content: '';
-    inset: 0;
-    position: absolute;
-    background-color: rgba(157, 0, 255, 0.46);
-    z-index: -1;
-    border-radius: 0.9rem 0.9rem 0 0;
-
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: rgba(157, 0, 255, 0.4);
+  z-index: -1;
+  border-radius: 0.9rem 0.9rem 0 0;
+}
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60%;
+  align-items: center;
+  padding: 1rem 0;
+}
+.card-heading {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: hsl(0, 0%, 100%);
+  padding: 0 1.8rem;
+  text-align: center;
+}
+.card-heading > span {
+  color: hsl(277, 64%, 61%);
+}
+.main-paragraph {
+  padding: 0 1.8rem;
+  text-align: center;
+  line-height: 1.6em;
+  margin-bottom: 1rem;
+}
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.stat-heading {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-top: 0.4rem;
 }
